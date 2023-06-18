@@ -55,3 +55,8 @@ class Solution:
             else: 
                 res += roman[s[i]]
         return res
+
+print(Solution().romanToInt("III")) #3
+print(Solution().romanToInt("LVIII")) #58
+print(Solution().romanToInt("MCMXCIV")) #1994
+

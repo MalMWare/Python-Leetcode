@@ -58,5 +58,5 @@ class Solution:
 
 print(Solution().romanToInt("III")) #3
 print(Solution().romanToInt("LVIII")) #58
-print(Solution().romanToInt("MCMXCIV")) #1994
+print(Solution().romanToInt("MCMXCIX")) #1999
 

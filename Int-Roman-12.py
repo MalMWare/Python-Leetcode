@@ -17,3 +17,20 @@
 # C can be placed before D (500) and M (1000) to make 400 and 900.
 # Given an integer, convert it to a roman numeral.
 
+class Solution:
+    def intToRoman(self, num: int) -> str:
+        #need sot be a list instead of a dict because it has to go in decending order
+        itr = [
+            [1, "I"], [4, "IV"], [5, "V"], [9, "IX"], [10, "X"], [40, "XL"], [50, "L"], [90, "XC"], [100, "C"], [400, "CD"], [500, "D"], [900, "CM"], [1000, "M"]
+        ]
+
+        res = ""
+
+        for val, stg in reversed(itr):
+            if num // val:
+                count = num // val
+                res += (count * stg)
+                num = num % val
+        return res
+
+print(Solution().intToRoman(3)) #3
